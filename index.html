@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mouna AI · Know what's running out before it does</title>
+<meta name="description" content="Mouna AI keeps your home's grocery stock in one shared pantry. Order from partner stores in Alexandria, and the AI tells you what to restock and when.">
+<meta name="theme-color" content="#2E1065">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>(function(r){r.classList.add('anim');try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('khz-lang');if(l==='ar'){r.lang='ar';r.dir='rtl';}}catch(e){}setTimeout(function(){if(!window.__khzReady){r.classList.remove('anim');r.classList.add('no-anim');}},3000);})(document.documentElement)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/thmanyahsans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+<a class="skip" href="#main" data-t="skip">Skip to content</a>
+
+<header class="site-head" id="top">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html" aria-label="Mouna AI">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="lid" x="8" y="6" width="24" height="6" rx="3" fill="#2E1065"/><path d="M10 12h20v18a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6z" fill="#6D28D9"/><rect x="14" y="19" width="12" height="9" rx="2" fill="#F5F3FF"/></svg>
+      <span class="brand-name">Mouna <b>AI</b></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <span class="nav-hover" aria-hidden="true"></span>
+      <a href="#how" data-t="nav.how">How it works</a>
+      <a href="#ai" data-t="nav.ai">AI features</a>
+      <a href="#stores" data-t="nav.stores">For stores</a>
+      <a href="#faq" data-t="nav.faq">FAQ</a>
+      <a href="#about" data-t="nav.about">About</a>
+    </nav>
+    <div class="head-actions">
+      <button class="lang-btn" type="button" data-lang-toggle><i data-i="globe"></i><span data-t="lang">العربية</span></button>
+      <a class="btn btn-ghost btn-sm login" href="app.html#home" data-t="nav.login">Log in</a>
+      <a class="btn btn-primary btn-sm" href="app.html" data-t="nav.start">Get started</a>
+      <button class="icon-btn menu-btn" type="button" aria-expanded="false" aria-controls="mnav" data-t-attr="aria-label:nav.menu" aria-label="Menu"><i data-i="menu"></i></button>
+    </div>
+  </div>
+  <div class="mnav" id="mnav" hidden>
+    <a href="#how" data-t="nav.how">How it works</a>
+    <a href="#ai" data-t="nav.ai">AI features</a>
+    <a href="#stores" data-t="nav.stores">For stores</a>
+    <a href="#faq" data-t="nav.faq">FAQ</a>
+    <a href="app.html#home" data-t="nav.login">Log in</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <canvas class="dotfield" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow-chip" data-reveal data-delay="100"><i data-i="spark"></i><span data-t="hero.chip">Made in Alexandria</span></span>
+      <h1 class="hero-title" id="heroTitle" data-t="hero.title">Know what's running out <span class="mark">before it does.<svg class="mark-line" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 17C70 8 160 5 296 11"/></svg></span></h1>
+      <p class="hero-sub" data-reveal data-delay="350" data-t="hero.sub">Mouna AI keeps your home's grocery stock in one shared pantry. Order from partner stores, and the AI tells you what to restock and when.</p>
+      <div class="hero-ctas" data-reveal data-delay="480">
+        <a class="btn btn-primary btn-lg shine magnet" href="app.html"><span data-t="hero.cta1">Get started, it's free</span><i data-i="arrow" class="arr"></i></a>
+        <a class="btn btn-secondary btn-lg" href="#how" data-t="hero.cta2">See how it works</a>
+      </div>
+      <p class="hero-note" data-reveal data-delay="600" data-t="hero.note">For people living alone and shared homes · English and العربية</p>
+    </div>
+
+    <div class="hero-visual" data-reveal="scale" data-delay="250">
+      <article class="runout" aria-labelledby="roTitle">
+        <header class="ro-head">
+          <h2 id="roTitle" data-t="ro.title">Running out soon</h2>
+          <span class="ai-badge"><i data-i="spark"></i>AI</span>
+        </header>
+        <ul class="ro-list">
+          <li class="ro-item" data-days="3" data-level=".22">
+            <span class="thumb"><i data-i="milk"></i></span>
+            <span class="ro-meta"><strong data-t="ro.milk">Milk</strong><span data-t="ro.milkq">2 L left</span></span>
+            <span class="ro-level" aria-hidden="true"><i></i></span>
+            <span class="days tone-amber"><span class="flap num">3</span>&nbsp;<span data-t="u.days">days</span></span>
+          </li>
+          <li class="ro-item" data-days="5" data-level=".3">
+            <span class="thumb"><i data-i="oil"></i></span>
+            <span class="ro-meta"><strong data-t="ro.oil">Cooking oil</strong><span data-t="ro.oilq">0.5 L left</span></span>
+            <span class="ro-level" aria-hidden="true"><i></i></span>
+            <span class="days tone-amber"><span class="flap num">5</span>&nbsp;<span data-t="u.days">days</span></span>
+          </li>
+          <li class="ro-item" data-days="18" data-level=".78">
+            <span class="thumb"><i data-i="rice"></i></span>
+            <span class="ro-meta"><strong data-t="ro.rice">Rice</strong><span data-t="ro.riceq">3 kg left</span></span>
+            <span class="ro-level" aria-hidden="true"><i></i></span>
+            <span class="days tone-green"><span class="flap num">18</span>&nbsp;<span data-t="u.days18">days</span></span>
+          </li>
+        </ul>
+        <button class="btn btn-primary restock" type="button">
+          <span class="rs-label" data-t="ro.cta">Restock milk &amp; oil from El Nour Market</span>
+          <span class="rs-done" aria-hidden="true"><i data-i="check"></i><span data-t="ro.done">2 items added to your cart</span></span>
+        </button>
+      </article>
+
+      <div class="nstack" tabindex="0" data-t-attr="aria-label:ns.label" aria-label="Recent alerts">
+        <div class="note tone-red"><span class="n-ic"><i data-i="yogurt"></i></span><span><strong data-t="ns.1t">Yogurt expired yesterday</strong><small data-t="ns.1s">2 cups · throw away or log it</small></span></div>
+        <div class="note tone-amber"><span class="n-ic"><i data-i="egg"></i></span><span><strong data-t="ns.2t">Eggs expire in 4 days</strong><small data-t="ns.2s">Use them first this week</small></span></div>
+        <div class="note tone-violet"><span class="n-ic"><i data-i="tag"></i></span><span><strong data-t="ns.3t">Cooking oil −15% at Bahary</strong><small data-t="ns.3s">Offer ends Sunday</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <p class="kicker" data-reveal data-t="how.k">How it works</p>
+    <h2 class="sec-title" data-split data-reveal data-t="how.t">Three steps, then it runs itself</h2>
+    <div class="steps">
+      <svg class="steps-line" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path d="M60 20 C 300 -6, 700 46, 940 20"/></svg>
+      <article class="step" data-reveal data-delay="0">
+        <div class="step-vis vis-order" aria-hidden="true">
+          <div class="vo-cart"><i data-i="cart"></i><span class="vo-badge num">0</span></div>
+          <span class="vo-item" style="--x:-86px"><i data-i="milk"></i></span>
+          <span class="vo-item" style="--x:0px"><i data-i="bread"></i></span>
+          <span class="vo-item" style="--x:86px"><i data-i="rice"></i></span>
+        </div>
+        <span class="step-n num">1</span>
+        <h3 data-t="s1.t">Order essentials</h3>
+        <p data-t="s1.p">Shop milk, bread, rice, oil and more from partner stores near you.</p>
+      </article>
+      <article class="step" data-reveal data-delay="120">
+        <div class="step-vis vis-scan" aria-hidden="true">
+          <div class="vs-pack"><i data-i="milk"></i><span class="vs-qr"><i data-i="qr"></i></span><span class="vs-beam"></span></div>
+          <div class="vs-row"><i data-i="check"></i><span><b data-t="vs.t">Milk added</b><small data-t="vs.s">Expires 9 Nov</small></span></div>
+        </div>
+        <span class="step-n num">2</span>
+        <h3 data-t="s2.t">The pantry fills itself</h3>
+        <p data-t="s2.p">Every item carries a store QR code, so deliveries land in your pantry with their expiry dates.</p>
+      </article>
+      <article class="step step-ai" data-reveal data-delay="240">
+        <div class="step-vis vis-forecast" aria-hidden="true">
+          <svg viewBox="0 0 240 110" class="vf-chart">
+            <path class="vf-grid" d="M10 95H230M10 65H230M10 35H230"/>
+            <path class="vf-line" d="M12 22 L52 34 L92 41 L132 58 L160 66"/>
+            <path class="vf-fore" d="M160 66 L196 82 L226 95"/>
+            <circle class="vf-dot" cx="226" cy="95" r="5"/>
+          </svg>
+          <span class="vf-tag"><i data-i="spark"></i><span data-t="vf.tag">Runs out Sun 8 Nov</span></span>
+        </div>
+        <span class="step-n num">3</span>
+        <h3 data-t="s3.t">AI predicts what runs out</h3>
+        <p data-t="s3.p">It starts from what a household like yours typically uses, then learns from your own logs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOMES -->
+<section class="sec sec-soft" id="homes">
+  <div class="wrap">
+    <h2 class="sec-title" data-split data-reveal data-t="homes.t">Built for every kind of home</h2>
+    <div class="homes" data-reveal-group>
+      <article class="home-card">
+        <div class="avs" aria-hidden="true"><span class="av av-1">S</span></div>
+        <h3><i data-i="user"></i><span data-t="h1.t">Just me</span></h3>
+        <p data-t="h1.p">Living alone and want to stop finding expired yogurt.</p>
+      </article>
+      <article class="home-card">
+        <div class="avs" aria-hidden="true"><span class="av av-1">M</span><span class="av av-2">H</span><span class="av av-3 sm">Y</span><span class="av av-4 sm">L</span><span class="code num">MNA-48C2</span></div>
+        <h3><i data-i="house"></i><span data-t="h3.t">Shared home</span></h3>
+        <p data-t="h3.p">A family, friends or students under one roof. Everyone joins with one invite code and logs what they use.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES BENTO -->
+<section class="sec" id="features">
+  <div class="wrap">
+    <h2 class="sec-title" data-split data-reveal data-t="feat.t">Everything your pantry needs</h2>
+    <div class="bento">
+      <article class="tile tile-pantry" data-reveal>
+        <div class="tile-copy">
+          <h3 data-t="f1.t">Shared digital pantry</h3>
+          <p data-t="f1.p">Quantities, expiry dates and status for all 50 essentials.</p>
+        </div>
+        <div class="mini-pantry" aria-hidden="true">
+          <div class="mp-row"><span class="thumb"><i data-i="milk"></i></span><span class="mp-n"><b data-t="mp.milk">Milk</b><small data-t="mp.milkq">2 L · exp. 9 Nov</small></span><span class="chip chip-low" data-t="st.low">Running low</span></div>
+          <div class="mp-row"><span class="thumb"><i data-i="rice"></i></span><span class="mp-n"><b data-t="mp.rice">Rice</b><small data-t="mp.riceq">3 kg · exp. Aug 2027</small></span><span class="chip chip-fresh" data-t="st.fresh">Fresh</span></div>
+          <div class="mp-row is-red"><span class="thumb is-red"><i data-i="yogurt"></i></span><span class="mp-n"><b data-t="mp.yog">Yogurt</b><small data-t="mp.yogq">2 cups · expired yesterday</small></span><span class="chip chip-expired" data-t="st.expired">Expired</span></div>
+          <div class="mp-row"><span class="thumb is-amber"><i data-i="egg"></i></span><span class="mp-n"><b data-t="mp.egg">Eggs</b><small data-t="mp.eggq">6 left · 4 days</small></span><span class="chip chip-expiring" data-t="st.expiring">Expiring soon</span></div>
+          <div class="mp-row"><span class="thumb"><i data-i="oil"></i></span><span class="mp-n"><b data-t="mp.oil">Cooking oil</b><small data-t="mp.oilq">0.5 L · exp. Mar 2027</small></span><span class="chip chip-low" data-t="st.low">Running low</span></div>
+          <div class="mp-row"><span class="thumb"><i data-i="beans"></i></span><span class="mp-n"><b data-t="mp.beans">Fava beans</b><small data-t="mp.beansq">2 cans · exp. Jan 2028</small></span><span class="chip chip-fresh" data-t="st.fresh">Fresh</span></div>
+        </div>
+        <div class="mp-count" aria-hidden="true"><span class="num" data-count="50">50</span><small data-t="mp.ess">essentials tracked</small></div>
+      </article>
+
+      <article class="tile tile-scan" data-reveal data-delay="100">
+        <div class="barcode" aria-hidden="true"><span class="bars"></span><span class="laser"></span></div>
+        <div class="scan-pop" aria-hidden="true"><i data-i="check"></i><span data-t="scan.pop">Tuna can · added</span></div>
+        <div class="tile-copy">
+          <h3 data-t="f2.t">Scan anything</h3>
+          <p data-t="f2.p">Bought elsewhere? Scan the barcode or add it by hand.</p>
+        </div>
+      </article>
+
+      <article class="tile tile-expiry" data-reveal data-delay="200">
+        <div class="week" aria-hidden="true"></div>
+        <div class="tile-copy">
+          <h3 data-t="f3.t">Expiry alerts</h3>
+          <p data-t="f3.p">Know what to use first, before it goes to waste.</p>
+        </div>
+      </article>
+
+      <article class="tile tile-reorder" data-reveal data-delay="150">
+        <div class="tile-copy">
+          <h3 data-t="f4.t">One-tap reorder</h3>
+          <p data-t="f4.p">Prices in EGP, delivery from stores in your area.</p>
+          <button class="btn btn-primary btn-sm reorder-btn" type="button"><i data-i="undo"></i><span data-t="f4.btn">Reorder last basket</span></button>
+        </div>
+        <div class="printer" aria-hidden="true">
+          <div class="slot"></div>
+          <div class="paper-clip">
+            <div class="receipt">
+              <p class="rc-store" data-t="rc.store">El Nour Market</p>
+              <p class="rc-meta num">#1043 · 5 Nov · 7:12 PM</p>
+              <ul>
+                <li><span data-t="rc.tea">Tea</span><span class="num">45</span></li>
+                <li><span data-t="rc.sugar">Sugar 1 kg</span><span class="num">32</span></li>
+                <li><span data-t="rc.tuna">Tuna</span><span class="num">55</span></li>
+                <li class="muted"><span data-t="rc.del">Delivery</span><span class="num">15</span></li>
+              </ul>
+              <p class="rc-total"><span data-t="rc.total">Total</span><span class="num">EGP 147</span></p>
+              <p class="rc-zig"></p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="partners" data-reveal>
+      <p class="partners-label" data-t="pt.l">Partner stores</p>
+      <ul class="partner-list">
+        <li><span class="mono">EN</span><span data-t="pt.1">El Nour Market</span></li>
+        <li><span class="mono mono-2">BS</span><span data-t="pt.2">Bahary Supermarket</span></li>
+        <li><span class="mono mono-3">GB</span><span data-t="pt.3">Green Basket</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AI FEATURES -->
+<section class="sec sec-deep" id="ai">
+  <svg class="paths-bg" viewBox="0 0 700 320" preserveAspectRatio="none" fill="none" aria-hidden="true"></svg>
+  <div class="wrap">
+    <p class="kicker kicker-light" data-reveal><i data-i="spark"></i><span data-t="ai.k">AI features</span></p>
+    <h2 class="sec-title light" data-split data-reveal data-t="ai.t">Smarter every week you use it</h2>
+    <p class="sec-sub light" data-reveal data-delay="150" data-t="ai.s">Run-out prediction is live from day one. More features arrive as the AI learns.</p>
+    <div class="ai-grid" data-reveal-group>
+      <article class="ai-card">
+        <span class="chip chip-live"><span class="dot"></span><span data-t="st.live">Live</span></span>
+        <h3 data-t="a1.t">Run-out prediction</h3>
+        <p class="quote" data-t="a1.p">"Milk runs out in 3 days."</p>
+        <div class="runbar" aria-hidden="true"><i></i></div>
+      </article>
+      <article class="ai-card">
+        <span class="chip chip-live"><span class="dot"></span><span data-t="st.live">Live</span></span>
+        <h3 data-t="a2.t">Typical vs your usage</h3>
+        <p data-t="a2.p">See how your home compares with similar ones.</p>
+        <div class="cmp" aria-hidden="true">
+          <div><small data-t="a2.sim">Similar homes</small><span class="cmp-bar"><i style="--v:.62"></i></span></div>
+          <div><small data-t="a2.you">Your home</small><span class="cmp-bar you"><i style="--v:.8"></i></span></div>
+        </div>
+      </article>
+      <article class="ai-card soon">
+        <span class="chip chip-soon"><i data-i="lock"></i><span data-t="st.soon">Coming soon</span></span>
+        <h3 data-t="a3.t">Your next basket</h3>
+        <p data-t="a3.p">A ready list of what to buy next.</p>
+        <div class="ghost-list" aria-hidden="true"><i></i><i></i><i></i></div>
+      </article>
+      <article class="ai-card soon">
+        <span class="chip chip-soon"><i data-i="lock"></i><span data-t="st.soon">Coming soon</span></span>
+        <h3 data-t="a4.t">Budget until payday</h3>
+        <p data-t="a4.p">Forecasts, warnings and a basket that fits.</p>
+        <svg class="ghost-ring" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24"/><circle class="arc" cx="32" cy="32" r="24"/></svg>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOR STORES -->
+<section class="sec" id="stores">
+  <div class="wrap">
+    <div class="stores-panel" data-reveal>
+      <div class="stores-copy">
+        <p class="kicker" data-t="st.k">For stores</p>
+        <h2 class="sec-title" data-t="st.t">Run a grocery store in Alexandria?</h2>
+        <p class="sec-sub" data-t="st.s">Receive orders, print QR labels, run offers and see demand coming, all from one dashboard.</p>
+        <div class="stores-ctas">
+          <a class="btn btn-primary btn-lg magnet" href="store.html"><span data-t="st.cta">Apply as a partner store</span><i data-i="arrow" class="arr"></i></a>
+          <a class="btn btn-ghost btn-lg" href="store.html" data-t="st.demo">See the store dashboard</a>
+        </div>
+      </div>
+      <div class="mini-dash" aria-hidden="true">
+        <div class="md-top">
+          <div><small data-t="md.o">Orders today</small><b class="num" data-count="42">42</b><span class="up" data-t="md.up">+8 vs last Thursday</span></div>
+          <div><small data-t="md.s">Sales</small><b class="num" data-count="18420" data-prefix="EGP " data-locale="en-US">EGP 18,420</b></div>
+        </div>
+        <div class="md-bars">
+          <i style="--h:.22"></i><i style="--h:.4"></i><i style="--h:.62"></i><i style="--h:.52"></i><i style="--h:.78"></i><i class="peak" style="--h:1"></i><i style="--h:.66"></i><i style="--h:.32"></i>
+        </div>
+        <p class="md-cap" data-t="md.cap">Orders per hour · peak 3 PM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-soft" id="faq">
+  <div class="wrap faq-wrap">
+    <h2 class="sec-title" data-split data-reveal data-t="faq.t">Questions</h2>
+    <div class="faq" data-reveal-group>
+      <div class="qa">
+        <h3><button type="button" aria-expanded="true" aria-controls="qa1" id="qb1"><span data-t="q1">How does the AI know when my milk runs out?</span><span class="pm" aria-hidden="true"></span></button></h3>
+        <div class="ans" id="qa1" role="region" aria-labelledby="qb1"><div><p data-t="a1">It starts from typical consumption for a household like yours (how many people, their ages and sex), then adjusts as members tap "−1 used" or "Finished".</p></div></div>
+      </div>
+      <div class="qa">
+        <h3><button type="button" aria-expanded="false" aria-controls="qa2" id="qb2"><span data-t="q2">Can my roommates share one pantry?</span><span class="pm" aria-hidden="true"></span></button></h3>
+        <div class="ans" id="qa2" role="region" aria-labelledby="qb2"><div><p data-t="a2">Yes. One person creates the home and shares an invite code. Everyone who joins sees the same pantry and logs what they use.</p></div></div>
+      </div>
+      <div class="qa">
+        <h3><button type="button" aria-expanded="false" aria-controls="qa3" id="qb3"><span data-t="q3">What if I buy from a store that isn't a partner?</span><span class="pm" aria-hidden="true"></span></button></h3>
+        <div class="ans" id="qa3" role="region" aria-labelledby="qb3"><div><p data-t="a3">Scan the barcode or add it by hand. It joins your pantry and counts toward predictions like everything else.</p></div></div>
+      </div>
+    </div>
+    <a class="faq-all" href="#faq" data-reveal data-t="faq.all">See all questions →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot" id="about">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand brand-light" href="#top" aria-label="Mouna AI">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="lid" x="8" y="6" width="24" height="6" rx="3" fill="#A78BFA"/><path d="M10 12h20v18a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6z" fill="#FFFFFF"/><rect x="14" y="19" width="12" height="9" rx="2" fill="#2E1065"/></svg>
+        <span class="brand-name">Mouna <b>AI</b></span>
+      </a>
+      <p data-t="ft.about">A data science graduation project, Alexandria University, 2026–27.</p>
+    </div>
+    <nav class="foot-cols" aria-label="Footer">
+      <div><h3 data-t="ft.product">Product</h3><a href="#how" data-t="nav.how">How it works</a><a href="#ai" data-t="nav.ai">AI features</a><a href="#stores" data-t="nav.stores">For stores</a><a href="app.html" data-t="ft.app">Household app</a></div>
+      <div><h3 data-t="ft.project">Project</h3><a href="#about" data-t="ft.team">About &amp; team</a><a href="#faq" data-t="ft.help">FAQ &amp; help</a><a href="design-system.html" data-t="ft.ds">Design system</a><a href="admin.html" data-t="ft.admin">Admin panel</a></div>
+      <div><h3 data-t="ft.legal">Legal</h3><a href="#about" data-t="ft.privacy">Privacy</a><a href="#about" data-t="ft.terms">Terms</a></div>
+    </nav>
+  </div>
+  <div class="wrap foot-base"><span class="num">© 2026 Mouna AI</span><span data-t="ft.made">Made in Alexandria</span></div>
+</footer>
+
+<script src="vendor/anime.umd.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* Mouna AI · shared tokens + components
+   8px grid · 12px cards · 10px buttons · pill chips */
+
+@font-face{font-family:"Thmanyah";src:url("../fonts/thmanyahsans-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Thmanyah";src:url("../fonts/thmanyahsans-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Thmanyah";src:url("../fonts/thmanyahsans-Bold.woff2") format("woff2");font-weight:600 700;font-display:swap}
+@font-face{font-family:"Thmanyah";src:url("../fonts/thmanyahsans-Black.woff2") format("woff2");font-weight:800 900;font-display:swap}
+
+:root{
+  --violet:#6D28D9;
+  --violet-press:#5B21B6;
+  --deep:#2E1065;
+  --deep-2:#3B1784;
+  --lilac:#A78BFA;
+  --tint:#F5F3FF;
+  --tint-2:#EDE9FE;
+  --line:#E6E0F8;
+  --line-soft:#F0ECFA;
+  --ink:#1E1B2E;
+  --ink-2:#6B6880;
+  --ink-3:#8E8AA3;
+  --bg:#FFFFFF;
+  --bg-soft:#FAFAFC;
+
+  --green:#16A34A; --green-ink:#166534; --green-bg:#DCFCE7;
+  --amber:#F59E0B; --amber-ink:#92400E; --amber-bg:#FEF3C7;
+  --red:#DC2626;   --red-ink:#991B1B;   --red-bg:#FEE2E2; --red-tint:#FEF6F6;
+
+  --r-card:12px; --r-btn:10px; --r-panel:20px; --r-pill:999px;
+  --shadow-sm:0 1px 2px rgba(46,16,101,.05);
+  --shadow-md:0 1px 2px rgba(46,16,101,.04),0 12px 32px -16px rgba(46,16,101,.18);
+  --shadow-lg:0 2px 4px rgba(46,16,101,.04),0 32px 64px -24px rgba(46,16,101,.28);
+
+  --font-display:"Bricolage Grotesque","Thmanyah",ui-sans-serif,system-ui,sans-serif;
+  --font-ui:"Figtree","Thmanyah",ui-sans-serif,system-ui,sans-serif;
+
+  --ease-out:cubic-bezier(.22,1,.36,1);
+}
+html[lang="ar"]{
+  --font-display:"Thmanyah",ui-sans-serif,system-ui,sans-serif;
+  --font-ui:"Thmanyah",ui-sans-serif,system-ui,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+:where(ul,ol)[class]{list-style:none;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--font-ui);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+a{color:var(--violet);text-decoration:none}
+a:hover{color:var(--violet-press)}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--deep);margin:0;line-height:1.08;letter-spacing:-.03em;font-weight:800;text-wrap:balance}
+html[lang="ar"] :is(h1,h2,h3,h4){letter-spacing:0;line-height:1.3}
+p{margin:0;text-wrap:pretty}
+.num{font-variant-numeric:tabular-nums}
+:focus-visible{outline:3px solid var(--lilac);outline-offset:2px;border-radius:6px}
+::selection{background:var(--tint-2);color:var(--deep)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+@media (max-width:640px){.wrap{padding-inline:16px}}
+
+/* ---------- Brand ---------- */
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--deep)}
+.brand:hover{color:var(--deep)}
+.brand-name{font-family:var(--font-display);font-size:21px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}
+.brand-name b{color:var(--violet);font-weight:800}
+.brand-mark{width:30px;height:30px;flex:none;overflow:visible}
+.brand-mark .lid{transform-box:fill-box;transform-origin:50% 100%}
+
+/* ---------- Buttons ---------- */
+.btn{--h:44px;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:var(--h);padding:0 18px;border-radius:var(--r-btn);font:600 15px/1 var(--font-ui);white-space:nowrap;text-decoration:none;border:1px solid transparent;transition:background-color .2s,border-color .2s,color .2s,box-shadow .2s;-webkit-tap-highlight-color:transparent;user-select:none}
+.btn:active{transform:scale(.97)}
+.btn-lg{--h:52px;padding:0 24px;font-size:16px}
+.btn-sm{--h:36px;padding:0 12px;font-size:14px}
+.btn-primary{background:var(--violet);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 1px 2px rgba(46,16,101,.2)}
+.btn-primary:hover{background:var(--violet-press);color:#fff}
+.btn-secondary{background:#fff;color:var(--deep);border-color:var(--line)}
+.btn-secondary:hover{border-color:var(--lilac);color:var(--deep)}
+.btn-ghost{color:var(--violet)}
+.btn-ghost:hover{background:var(--tint)}
+.btn-danger{background:var(--red);color:#fff}
+.btn-light{background:#fff;color:var(--violet)}
+.btn-light:hover{background:var(--tint);color:var(--violet-press)}
+.btn[disabled],.btn[aria-disabled="true"]{background:var(--tint-2);color:var(--ink-3);border-color:transparent;cursor:not-allowed;box-shadow:none}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-sm svg{width:16px;height:16px}
+.btn .arr{transition:transform .35s var(--ease-out)}
+.btn:hover .arr{transform:translateX(3px)}
+html[dir="rtl"] .btn .arr{transform:scaleX(-1)}
+html[dir="rtl"] .btn:hover .arr{transform:scaleX(-1) translateX(3px)}
+.icon-btn{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:var(--r-pill);border:1px solid var(--line);background:#fff;color:var(--deep);transition:border-color .2s,background-color .2s}
+.icon-btn:hover{border-color:var(--lilac)}
+
+/* Shine sweep used on primary CTAs */
+.shine{overflow:hidden;isolation:isolate}
+.shine::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.28) 48%,transparent 66%);transform:translateX(-120%);animation:shine 4.5s var(--ease-out) 1.6s infinite}
+@keyframes shine{0%{transform:translateX(-120%)}38%,100%{transform:translateX(120%)}}
+
+/* ---------- Chips ---------- */
+.chip{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:var(--r-pill);font:600 12px/1 var(--font-ui);white-space:nowrap;background:var(--tint);color:var(--violet)}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.chip svg{width:11px;height:11px;flex:none}
+.chip-fresh{background:var(--green-bg);color:var(--green-ink)}
+.chip-low,.chip-expiring{background:var(--amber-bg);color:var(--amber-ink)}
+.chip-expired{background:var(--red-bg);color:var(--red-ink)}
+.chip-out{background:var(--red-tint);color:var(--red-ink);border:1px solid var(--red-bg)}
+.chip-soon{background:#fff;color:var(--violet);border:1px solid var(--line)}
+.chip-live{background:var(--green-bg);color:var(--green-ink)}
+.chip-live .dot{position:relative}
+.chip-live .dot::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--green);opacity:0;animation:ping 2s var(--ease-out) infinite}
+@keyframes ping{0%{transform:scale(.5);opacity:.8}100%{transform:scale(1.8);opacity:0}}
+.ai-badge{display:inline-flex;align-items:center;gap:4px;height:20px;padding:0 8px;border-radius:var(--r-pill);background:var(--tint);color:var(--violet);font:700 11px/1 var(--font-ui);letter-spacing:.02em;position:relative;overflow:hidden}
+.ai-badge svg{width:10px;height:10px}
+.ai-badge::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.85) 50%,transparent 65%);transform:translateX(-100%);animation:shine 3.6s ease-in-out infinite}
+
+/* Filter chip / segmented */
+.fchip{display:inline-flex;align-items:center;height:36px;padding:0 14px;border-radius:var(--r-pill);border:1px solid var(--line);background:#fff;color:var(--ink);font:500 14px/1 var(--font-ui);white-space:nowrap;transition:color .2s,border-color .2s;position:relative;z-index:1}
+.fchip:hover{border-color:var(--lilac)}
+.fchip[aria-pressed="true"],.fchip[aria-selected="true"]{color:#fff;border-color:transparent;background:var(--violet)}
+.seg .fchip[aria-pressed="true"]{background:transparent}
+.seg{position:relative;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px}
+.seg::-webkit-scrollbar{display:none}
+.seg .pill-bg{position:absolute;top:2px;left:0;height:36px;border-radius:var(--r-pill);background:var(--violet);z-index:0;pointer-events:none;will-change:transform,width}
+
+/* ---------- Inputs ---------- */
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font:600 13px/1.2 var(--font-ui);color:var(--ink)}
+.input{height:44px;padding:0 14px;border-radius:var(--r-btn);border:1px solid var(--line);background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s;width:100%}
+.input::placeholder{color:var(--ink-3)}
+.input:hover{border-color:var(--lilac)}
+.input:focus{outline:none;border-color:var(--violet);box-shadow:0 0 0 4px var(--tint-2)}
+.search{position:relative;display:flex;align-items:center}
+.search svg{position:absolute;inset-inline-start:14px;width:16px;height:16px;color:var(--ink-2);pointer-events:none}
+.search .input{padding-inline-start:40px;border-radius:var(--r-pill);background:var(--bg-soft)}
+
+/* ---------- Cards ---------- */
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-card)}
+.thumb{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:var(--tint);color:var(--violet);flex:none}
+.thumb svg{width:24px;height:24px}
+.thumb.is-red{background:var(--red-tint);color:var(--red)}
+.thumb.is-amber{background:#FFFBEB;color:#B45309}
+
+/* Locked "coming soon" AI panel */
+.locked{position:relative;overflow:hidden;border-radius:var(--r-card);background:var(--tint);border:1px solid var(--line);isolation:isolate}
+.locked .ghost{position:absolute;inset:0;z-index:-1;filter:blur(7px);opacity:.75;pointer-events:none}
+.locked .ghost i{position:absolute;border-radius:8px;background:var(--lilac);opacity:.45}
+.locked .lock-copy{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:24px 16px;min-height:100%}
+.locked .lock-copy strong{display:inline-flex;align-items:center;gap:6px;color:var(--deep);font:700 15px/1.2 var(--font-ui)}
+.locked .lock-copy strong svg{width:14px;height:14px;flex:none}
+.locked .lock-copy span{color:var(--ink-2);font-size:13px;line-height:1.45;max-width:30ch}
+.locked .lock-copy .chip-soon{margin-top:4px}
+
+/* ---------- Toast ---------- */
+.toasts{position:fixed;inset-inline:0;bottom:24px;z-index:200;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;padding-inline:16px}
+.toast{pointer-events:auto;display:flex;align-items:center;gap:12px;min-height:48px;max-width:min(440px,100%);padding:10px 10px 10px 16px;border-radius:14px;background:var(--ink);color:#fff;font:500 14px/1.35 var(--font-ui);box-shadow:0 18px 40px -16px rgba(30,27,46,.55)}
+html[dir="rtl"] .toast{padding:10px 16px 10px 10px}
+.toast .t-ic{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--green)}
+.toast .t-ic.is-red{background:var(--red)}
+.toast .t-ic.is-violet{background:var(--violet)}
+.toast .t-ic svg{width:13px;height:13px}
+.toast .t-msg{flex:1}
+.toast .t-act{height:32px;padding:0 12px;border-radius:8px;background:rgba(255,255,255,.12);color:#fff;font-weight:600;font-size:13px}
+.toast .t-act:hover{background:rgba(255,255,255,.2)}
+
+/* ---------- Motion base ---------- */
+/* Hidden start-states only apply once JS + anime are present (html.anim); a head timer removes them if anything fails. */
+html.anim [data-reveal]{opacity:0}
+html.anim [data-reveal-group]>*{opacity:0}
+html.anim .split .wi{display:inline-block;transform:translateY(105%)}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+html[lang="ar"] .split .w{padding-bottom:.25em;margin-bottom:-.25em;padding-top:.1em;margin-top:-.1em}
+html.no-anim [data-reveal],html.no-anim [data-reveal-group]>*{opacity:1!important}
+html.no-anim .split .wi{transform:none!important}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  html.anim [data-reveal],html.anim [data-reveal-group]>*{opacity:1!important}
+  html.anim .split .wi{transform:none!important}
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mouna Admin · AI models</title>
+<meta name="description" content="Mouna AI admin panel: the 21 AI models behind the product, their status and where they are used.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>(function(r){r.classList.add('anim');setTimeout(function(){if(!window.__khzReady){r.classList.remove('anim');r.classList.add('no-anim');}},3000);})(document.documentElement)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/dash.css">
+</head>
+<body class="dash-body" data-page="admin">
+<div class="shell">
+  <aside class="sb" aria-label="Admin navigation">
+    <a class="brand" href="index.html" aria-label="Mouna Admin home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="lid" x="8" y="6" width="24" height="6" rx="3" fill="#A78BFA"/><path d="M10 12h20v18a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6z" fill="#FFFFFF"/><rect x="14" y="19" width="12" height="9" rx="2" fill="#2E1065"/></svg>
+      <span class="brand-name">Mouna <b>Admin</b></span>
+    </a>
+    <nav class="sb-nav">
+      <span class="sb-ind" aria-hidden="true"></span>
+      <button type="button" data-soon><i data-i="chart"></i>Overview</button>
+      <button type="button" data-soon><i data-i="users"></i>Households &amp; users</button>
+      <a href="store.html"><i data-i="store"></i>Partner stores<span class="count num">2</span></a>
+      <button type="button" data-soon><i data-i="box"></i>Product catalogue</button>
+      <button type="button" data-soon><i data-i="pantry"></i>Consumption norms</button>
+      <button type="button" data-soon><i data-i="bread"></i>Recipes</button>
+      <button type="button" data-soon><i data-i="orders"></i>Orders monitor</button>
+      <button type="button" data-soon><i data-i="upload"></i>Data import</button>
+      <a href="admin.html" aria-current="page"><i data-i="brain"></i>AI models</a>
+      <button type="button" data-soon><i data-i="gear"></i>Content &amp; settings</button>
+    </nav>
+    <div class="sb-foot">
+      <a href="index.html"><i data-i="left"></i>Mouna website</a>
+      <a href="design-system.html"><i data-i="grid"></i>Design system</a>
+      <a href="app.html#home"><i data-i="home"></i>Household app</a>
+    </div>
+  </aside>
+  <div class="sb-scrim" data-sb-close></div>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn sb-toggle" type="button" aria-label="Open navigation" data-sb-open><i data-i="menu"></i></button>
+      <label class="search"><span class="sr-only">Search models</span><i data-i="search"></i><input class="input" type="search" id="mSearch" placeholder="Search models"></label>
+      <div class="tb-right">
+        <button class="icon-btn tb-bell" type="button" aria-label="Notifications" data-soon><i data-i="bell"></i><i></i></button>
+        <span class="me"><span class="ini">PT</span><span class="nm">Project team</span></span>
+      </div>
+    </header>
+
+    <main class="content" id="main">
+      <div class="pg-head" data-reveal>
+        <div><h1>AI models</h1><p id="mSummary">21 models · 2 live · 19 designed and waiting for data</p></div>
+        <div class="seg filters" role="group" aria-label="Filter models" id="mFilter">
+          <button class="fchip" type="button" data-value="all" aria-pressed="true">All <span class="num">&nbsp;21</span></button>
+          <button class="fchip" type="button" data-value="live" aria-pressed="false">Live <span class="num">&nbsp;2</span></button>
+          <button class="fchip" type="button" data-value="soon" aria-pressed="false">Coming soon <span class="num">&nbsp;19</span></button>
+        </div>
+      </div>
+      <div class="tbl-wrap" data-reveal data-delay="120">
+        <table class="tbl">
+          <thead><tr><th scope="col">#</th><th scope="col">Model</th><th scope="col">Used in</th><th scope="col">Status</th><th scope="col">Version</th><th scope="col">Accuracy</th><th scope="col">Last trained</th></tr></thead>
+          <tbody id="mRows"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="vendor/anime.umd.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/dash.js"></script>
+</body>
+</html>
